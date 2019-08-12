@@ -15,19 +15,15 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-
         <spring.version>3.2.2.RELEASE</spring.version>
         <spring.redis.version>1.5.2.RELEASE</spring.redis.version>
         <jedis.version>2.7.3</jedis.version>
-
         <oltu.version>1.0.0</oltu.version>
         <shiro.version>1.2.3</shiro.version>
-
     </properties>
 
     <build>
         <finalName>os-core</finalName>
-
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -38,7 +34,6 @@
                     <encoding>UTF-8</encoding>
                 </configuration>
             </plugin>
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
