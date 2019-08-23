@@ -105,31 +105,50 @@
             <!--</execution>-->
             <!--</executions>-->
             <!--</plugin>-->
+            <!--<plugin>-->
+                <!--<artifactId>maven-surefire-plugin</artifactId>-->
+                <!--<version>2.4</version>-->
+                <!--<configuration>-->
+                    <!--<skip>${test.skip}</skip>-->
+                    <!--<forkMode>none</forkMode>-->
+                    <!--<includes>-->
+                        <!--<include>**/*Test.java</include>-->
+                    <!--</includes>-->
+                    <!--<systemProperties>-->
+                        <!--<property>-->
+                            <!--<name>jdbc.url</name>-->
+                            <!--<value>${jdbc.url}</value>-->
+                        <!--</property>-->
+                        <!--<property>-->
+                            <!--<name>jdbc.username</name>-->
+                            <!--<value>${jdbc.user}</value>-->
+                        <!--</property>-->
+                        <!--<property>-->
+                            <!--<name>jdbc.password</name>-->
+                            <!--<value>${jdbc.pass}</value>-->
+                        <!--</property>-->
+                    <!--</systemProperties>-->
+                <!--</configuration>-->
+            <!--</plugin>-->
+
             <plugin>
-                <artifactId>maven-surefire-plugin</artifactId>
-                <version>2.4</version>
+                <groupId>org.apache.maven.plugin</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>2.1</version>
                 <configuration>
-                    <skip>${test.skip}</skip>
-                    <forkMode>none</forkMode>
-                    <includes>
-                        <include>**/*Test.java</include>
-                    </includes>
-                    <systemProperties>
-                        <property>
-                            <name>jdbc.url</name>
-                            <value>${jdbc.url}</value>
-                        </property>
-                        <property>
-                            <name>jdbc.username</name>
-                            <value>${jdbc.user}</value>
-                        </property>
-                        <property>
-                            <name>jdbc.password</name>
-                            <value>${jdbc.pass}</value>
-                        </property>
-                    </systemProperties>
+                    <skip>true</skip>
                 </configuration>
             </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <version>2.5</version>
+                <configuration>
+                    <skip>true</skip>
+                </configuration>
+            </plugin>
+
+
         </plugins>
 
         <resources>
